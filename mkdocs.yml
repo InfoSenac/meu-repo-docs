@@ -1,0 +1,54 @@
+site_name: Base de Conhecimento Técnico - TI
+site_description: Procedimentos Operacionais Padrão e Manuais Técnicos de Infraestrutura
+site_author: Aluno Técnico em Informática
+repo_name: Repositório no GitHub
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: pt-BR
+  palette:
+    # Alternador de tema claro/escuro
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    - scheme: slate
+      primary: indigo
+      accent: light blue
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - tables
+  - attr_list
+
+# Menu de navegação lateral estruturado
+nav:
+  - Início: index.md
+  - Procedimentos Clonezilla (UC3):
+      - POP-001 - Clone Direto (Disk to Disk): modulos/pop-001-disk-to-disk.md
+      - POP-002 - Imagem e Contingência: modulos/pop-002-image-backup.md
+      - POP-003 - Restauração Massiva PXE: modulos/pop-003-lite-server.md
+      - Resolução de Problemas: modulos/troubleshooting.md
+  # Seções reservadas para as próximas UCs do curso
+  - Redes e Servidores (UC5 / UC7):
+      - Visão Geral: index.md
